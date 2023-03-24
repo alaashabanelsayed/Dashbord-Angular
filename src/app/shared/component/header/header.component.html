@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="flex justify-between	">
+       <div>  <button mat-icon-button (click)="toggleSideBar()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>App logo</span></div>
+       
+       
+        <div class="">
+        <ul class="flex ">
+    <li class="">
+        <button mat-button>
+            <mat-icon>settings</mat-icon>
+        </button>
+    </li>
+    <li class="">
+        <button mat-button>
+            <mat-icon>help_outline</mat-icon>
+        </button>
+    </li>
+
+    <li class="">
+        <button mat-button [matMenuTriggerFor]="menu"> <mat-icon>person_outline</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><mat-icon>exit_to_app</mat-icon> Sign out</button>
+          <!-- <button mat-menu-item><mat-icon>person_outline</mat-icon></button> -->
+        </mat-menu>
+        
+    </li>
+
+      </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
